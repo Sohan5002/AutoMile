@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+    <div th:with="currentPage=${mycurrentpage}">
+        <div class="menu_block">
+            <div class="container_12">
+                <div class="grid_12">
+                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                        <ul class="sf-menu">
+                            <li th:class="${currentPage == '/home' || currentPage == '/welcome' || currentPage == '/index' ? 'current' : ''}"><a href="home">Home</a></li>
+                            <li th:class="${currentPage == '/About' ? 'current' : ''}"><a href="About">About</a></li>
+                            <li th:class="${currentPage == '/Cars' ? 'current' : ''}"><a href="Cars">Cars</a></li>
+                            <li th:class="${currentPage == '/Services' ? 'current' : ''}"><a href="Services">Services</a></li>
+                            <li th:class="${currentPage == '/Contacts' ? 'current' : ''}"><a href="Contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Your Happy Family">
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</header>
+</body>
+</html>
